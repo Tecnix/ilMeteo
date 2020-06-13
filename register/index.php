@@ -10,14 +10,13 @@
                 $password=$_POST['password'];
                 $pass2=$_POST['pass2'];
                 $email=$_POST['email'];
-                    //controllo che i campi non siano vuoti e che le due passwword siano uguali
                     if($nome=="" || $cognome=="" || $pass1="" || $pass2=="" || $email==""){
                         echo"Devi compilare tutti i Campi";
                     }else if($password!=$pass2){
                         echo"Le password devono coincidere<br>";
                         echo "<a href='../register/index.html'>Indietro</a>";
                     }else{
-                        $connessione=new mysqli("eu-cdbr-west-03.cleardb.net:3306", "ba609c39ced810", "c59b6be7", "heroku_06276f2ed7f0076");
+                        $connessione=new mysqli("eu-cdbr-west-03.cleardb.net:3306", "ba55e2c3290522", "ecffbea9", "heroku_5c48b4796fa9303");
                         $sql="SELECT * FROM users WHERE email='$email'";
                         $result=$connessione->query($sql);
                         if (isset($result->num_rows) && $result->num_rows >0){

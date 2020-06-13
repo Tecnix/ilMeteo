@@ -12,8 +12,8 @@
   <div style="text-align:right">
 		<form action="../logout/logout.php">
 			<button type="submit">LOGOUT</button>
-		</form>
-	</div>
+    </form>
+  </div>
     <header>
       <input type="text" autocomplete="off" class="search-box" placeholder="Inserisci la città da cercare..." />
     </header>
